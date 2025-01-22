@@ -94,8 +94,6 @@ jarurat-care-app/
 │   │   ├── MapComponent.jsx
 │   │   ├── Navbar.jsx
 │   │   ├── SearchFilter.jsx
-│   ├── context/            # React Context API files
-│   │   └── GlobalContext.jsx
 │   ├── hooks/              # Custom hooks
 │   │   ├── useDebounce.js
 │   │   └── useFetchData.js
