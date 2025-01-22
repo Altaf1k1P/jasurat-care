@@ -1,29 +1,40 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react"
+import "../css/Navbar.css";
+import { Link } from "react-router-dom"
+import { FaBars } from "react-icons/fa"
+import { ImCross } from "react-icons/im"
 
-
-const Navbar = (props) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+const Navbar = () => {
+  const [Mobile, setMobile] = useState(false)
   return (
-    <nav>
+    <>
+      <nav className='navbar'>
+        <h3 className='logo'>Logo</h3>
+        {/*
+        if large screen ma xa bhane Mobile add huxa
+        if mobile screen ma xa bhane nav-links-mobile add huxa
+        */}
+        <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(false)}>
+          <Link to='/' className='home'>
+            <li>Home</li>
+          </Link>
+        </ul>
+        {/* 
+        whenever we click on button = setMobile(!Mobile) ==  is mobile oppsite to setMobile 
+        */}
+        <button
+  className="mobile-menu-icon"
+  onClick={() => setMobile(!Mobile)}
+>
+  {Mobile ? (
+    <ImCross style={{ color: "#007bff" }} />
+  ) : (
+    <FaBars style={{ color: "#333" }} />
+  )}
+</button>
 
-      <div className="logo ">My App</div>
-      <div className={`menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
-      <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        &#9776;
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+      </nav>
+    </> 
+  )
+}
+export default Navbar

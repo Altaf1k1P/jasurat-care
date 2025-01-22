@@ -1,4 +1,5 @@
 /* Global Styles */
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,49 +8,17 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Navbar Styles */
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: #fff;
-}
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.menu {
-  display: flex;
-  gap: 1rem;
-  transition: transform 0.3s ease-in-out;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.menu a:hover {
-  background-color: #555;
-}
-
+/* Mobile Menu Icon */
 .mobile-menu-icon {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  color: white;
+  z-index: 1100;
 }
 
-.menu.open {
-  transform: translateX(0);
-}
 
 
 /* Search Filter */
@@ -134,7 +103,6 @@ input[type="text"] {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .user-link {
   text-decoration: none;
   color: #333;
@@ -178,7 +146,6 @@ input[type="text"]:focus {
   outline: none;
 }
 
-
 /* Map Component */
 .leaflet-container {
   width: 100% !important;
@@ -186,7 +153,7 @@ input[type="text"]:focus {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-/* Add this in your CSS file */
+
 .map-wrapper {
   height: 400px; /* Or any desired height */
   width: 100%;   /* Full width */
@@ -250,7 +217,6 @@ input[type="text"]:focus {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
-
 
 @media (max-width: 768px) {
   .leaflet-container {
